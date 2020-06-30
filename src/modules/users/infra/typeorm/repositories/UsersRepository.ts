@@ -1,10 +1,10 @@
 import { getRepository, Repository } from 'typeorm';
 
-import IUsersRepository from '@modules/users/repositories/IUsersRepository';
+import IUserRepository from '@modules/users/repositories/IUserRepository';
 import ICreateUserDTO from '@modules/users/dtos/ICreateUserDTO';
 import User from '../entities/User';
 
-class UsersReposity implements IUsersRepository {
+class UsersReposity implements IUserRepository {
   private ormRepository: Repository<User>;
 
   constructor() {

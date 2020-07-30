@@ -20,7 +20,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/files', express.static(uploadConfig.uploadFolder));
 app.use(routes);
-app.use(errors);
+app.use(errors());
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   if (err instanceof AppError) {
